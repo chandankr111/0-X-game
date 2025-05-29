@@ -1,6 +1,10 @@
 # Build stage
 FROM node:20-alpine AS build
 WORKDIR /app
+
+# Update apk and install fixed libxml2 version before dependencies install
+RUN apk update && apk add --no-cache libxml2=2.13.4-r6
+
 COPY package*.json ./
 RUN npm ci
 COPY . .
