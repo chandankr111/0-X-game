@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: 0-x-game
-        image: ghcr.io/chandankr111/0-x-game:sha-666053ace242bd38e156f4a1963c2f239aa177bc
+        image: ghcr.io/chandankr111/0-x-game:sha-cbfbfb1e792efada33168c65c00b69cc7f0f7d92
         # Image will be automatically updated by CI/CD pipeline
         imagePullPolicy: Always
         ports:
