@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tic-tac-toe
+  name: 0-x-game
   labels:
-    app: tic-tac-toe
+    app: 0-x-game
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: tic-tac-toe
+      app: 0-x-game
   template:
     metadata:
       labels:
-        app: tic-tac-toe
+        app: 0-x-game
     spec:
       containers:
-      - name: tic-tac-toe
+      - name: 0-x-game
         image: ghcr.io/chandankr111/0-x-game:sha-666053ace242bd38e156f4a1963c2f239aa177bc
         # Image will be automatically updated by CI/CD pipeline
         imagePullPolicy: Always
